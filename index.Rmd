@@ -1,11 +1,10 @@
 ---
-title: Sparky's Resume"
-author: Sparky The SunDevil
+title: "Alissa Power's Resume"
+author: "Alissa Power"
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
     css: ['css/custom_resume.css', 'css/styles.css', 'resume']
-    # set it to true for a self-contained HTML page but it'll take longer to render
     self_contained: true
 ---
 
@@ -47,36 +46,32 @@ Aside
 ================================================================================
 
 
-![logo](256px-Sparky_the_Sun_Devil_vs_USC_2011.jpg){width=100%}
 
 Contact {#contact}
 --------------------------------------------------------------------------------
 
 
 
-- <i class="fa fa-envelope"></i> sparky-the-sundevil-@asu.edu
-- <i class="fa fa-twitter"></i> SparkyTheSunDevil
-- <i class="fa fa-github"></i> https://github.com/Watts-College/paf-514-cv-example
-- <i class="fa fa-link"></i> [https://watts-college.github.io/paf-514-cv-example](https://watts-college.github.io/paf-514-cv-example)
+- <i class="fa fa-envelope"></i> almowrey@asu.edu
+- <i class="fa fa-github"></i> https://github.com/almowrey2026
 - <i class="fa fa-phone"></i> (123) 456-7890
 
 
 
-Language Skills {#skills}
+Technical Skills {#skills}
 --------------------------------------------------------------------------------
 
 
 ```{r}
 skills <- tribble(
-  ~skill,               ~level,
-  "R",                  5,
-  "Javascript (d3.js)", 2,
-  "Python",             4,
-  "Bash",               1.5,
-  "SQL",                5,
-  "C++",                1,
-  "AWK",                2
+  ~skill,                ~level,
+  "R",                   3,
+  "Data Analysis",       4,
+  "Data Visualization",  4,
+  "Project Management",  5,
+  "Clinical Research",   5
 )
+
 build_skill_bars(skills)
 ```
 
@@ -85,16 +80,9 @@ build_skill_bars(skills)
 Open Source Contributions {#open-source}
 --------------------------------------------------------------------------------
 
-All projects available at `github.com/Watts-College/<name>`
+Selected projects available on GitHub:
 
-
-- `montyhall`: R package to solve the MontyHall problem
-
-
-More info {#more-info}
---------------------------------------------------------------------------------
-
-See full CV [here](https://watts-college.github.io/paf-514-cv-example/cv.html) for more complete list of positions and publications.
+- `montyhall`: R package implementing and simulating the Monty Hall problem
 
 
 Disclaimer {#disclaimer}
@@ -102,7 +90,7 @@ Disclaimer {#disclaimer}
 
 Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
 
-Source code: [https://github.com/Watts-College/paf-514-cv-example](https://github.com/Watts-College/paf-514-cv-example).
+[View source code on GitHub](https://github.com/almowrey2026/paf-514-cv-example).
 
 Last updated on `r Sys.Date()`.
 
@@ -112,14 +100,13 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Sparky The SunDevil {#title}
+Alissa Power {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "I have served as the Mascot for Arizona State University for 7 years. I completed my undergraduate studies in Pitchfork Management and I am currently a PhD Candidate in Mascotting.
+intro_text <- "Public health technology and clinical research leader with experience building scalable operational systems, data-driven performance frameworks, and AI-enabled tools across healthcare and clinical research.
 
-Currently searching for a data science position that allows me to integrate my mascotting skills with analytics to continually improve school spirit and ensure that SunDevils are the greatest fanbase in the world. 
-"
+Currently pursuing a Master of Public Health in Public Health Technology at Arizona State University, with interests in digital health, health informatics, applied AI/ML, and improving access to healthcare and clinical research."
 
 
 cat(sanitize_links(intro_text))
@@ -143,12 +130,12 @@ Selected Positions {data-icon=suitcase}
 position_data %>% print_section('positions')
 ```
 
-Selected Writing {data-icon=newspaper}
+Selected Projects {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 
 ```{r}
-position_data %>% print_section('writings')
+position_data %>% print_section('projects')
 ```
 
 
